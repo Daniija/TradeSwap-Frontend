@@ -1,5 +1,7 @@
+// @dart=2.9
 import 'package:flutter/material.dart';
 import 'screens/landing_screen.dart';
+import 'screens/carousel_landing.dart';
 import 'screens/tradesman/tradesman_signup.dart';
 
 void main() {
@@ -7,7 +9,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "TradeSwap App",
-      home: TradesmanSignup()
+      home: LandingScreen()
     );
   }
 }
